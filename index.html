@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>myself</title>
-    <link rel="icon" href="tie.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <!-- main.css -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- main.js -->
-    <script defer src="js/main.js"></script>
+  
+  <title>My_PORTFOLIO</title>
 
+  <link rel="icon" href="tie.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script defer src="js/main.js"></script>
 </head>
 <body>
   <header>
@@ -28,14 +37,14 @@
           <!-- 본인 메뉴 구조에 맞게 변경 -->
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#skill">SKILL</a></li>
-          <li><a href="#project">PROJECT</a></li>
+          <li><a href="#license">LICENSE</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-<section class="visual">
+  <section class="visual">
   <div class="inner">
     <p class="first-line">
       <span>F</span><span>u</span><span>l</span><span>l</span>&nbsp;
@@ -48,9 +57,9 @@
       <span>입니다.</span>
     </p>
   </div>
-</section>
+  </section>
 
-<section id="about" class="about">
+  <section id="about" class="about">
     <div class="inner">
       <h2 class="title font-en">ABOUT</h2>
       <div class="about__wrapper">
@@ -58,8 +67,8 @@
           <img src="./img/profile.jpg" alt="프로필">
         </div>
         <div class="about__text">
-          <strong class="slogan font-en">Simple is Best</strong>
-          <h3 class="font-en">Kim Hyeon jin(0000.00.00)</h3>
+          <strong class="slogan font-en">Just do it</strong>
+          <h3 class="font-en">Kim Hyeon jin(0000.08.16)</h3>
           <div>
             <h4 class="font-en">EDUCATION</h4>
             <ul>
@@ -72,7 +81,149 @@
     </div>
   </section>
 
+  <section id="skill" class="skill scroll-spy">
+    <div class="inner">
+      <h2 class="title font-en">SKILL</h2>
+      <!-- 스킬 추가하려면 li 요소 복사 붙여넣기 -->
+      <ul class="skill__list">
+        <li class="h">
+          <h3 class="font-en">Java</h3>
+          <h4 class="font-en">Java<br>Programing</h4>
+          <ul>
+            <li>객체지향</li>
+            <li>파일 입출력</li>
+            <li>JDBC</li>
+          </ul>
+        </li>
+        <li class="h">
+          <h3 class="font-en">Html</h3>
+          <h4 class="font-en">HTML5</h4>
+          <ul>
+            <li>웹페이지 구조 설계</li>
+            <li>시맨틱 태그</li>
+          </ul>
+        </li>
+        <li class="h">
+          <h3 class="font-en">Css</h3>
+          <h4 class="font-en">CSS3</h4>
+          <ul>
+            <li>웹페이지 레이아웃 설계</li>
+            <li>웹페이지 디자인</li>
+            <li>반응형 제작</li>
+          </ul>
+        </li>
+        <li class="h">
+          <h3 class="font-en">Js</h3>
+          <h4 class="font-en">JavaScript</h4>
+          <ul>
+            <li>DOM 조작, 제어</li>
+            <li>이벤트 처리</li>
+            <li>비동기 통신</li>
+          </ul>
+        </li>
+        <li class="h">
+          <h3 class="font-en">React</h3>
+          <h4 class="font-en">React JS</h4>
+          <ul>
+            <li>SPA 개발</li>
+            <li>전역 상태 관리</li>
+            <li>클라이언트 라우팅</li>
+            <li>CSR 방식 앱개발</li>
+          </ul>
+        </li>
+        <li class="h">
+          <h3 class="font-en">python</h3>
+          <h4 class="font-en">python</h4>
+          <ul>
+            <li>파이썬 기본 문법</li>
+            <li>파일 입출력, 예외 처리</li>
+            <li>데이터 분석 Pandas</li>
+          </ul>
+        </li>
+        <li class="h">
+          <h3 class="font-en">sql</h3>
+          <h4 class="font-en">sql</h4>
+          <ul>
+            <li>데이터베이스 기본 구조</li>
+            <li>관계형 데이터베이스</li>
+            <li>데이터 조회 및 조작</li>
+            <li>서브쿼리, 인덱스</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
 
+  <!-- license -->
+  <section id="license" class="license font-en">
+    <div class="inner">
+      <h2 class="title">LICENSE</h2>
+      <div class="port">
+        <div class="port__img">
+          <!-- 슬라이드 -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/jungbo.jpg" alt="자격증1">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/jungboex.jpg" alt="자격증2">
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="port__text">
+          <h3>정보처리기사</h3>
+          <ul>
+            <li><span>주요 기능 : </span>주요 기능 설명</li>
+            <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
+            <li><span>GitHub : </span>깃허브 주소</li>
+            <li><span>URL : </span>배포 주소</li>
+          </ul>
+          <div class="btn-group">
+            <a href="javascript:void(0)" class="btn btn--brown btn-modal-image" data-image-src="img/jungbo.jpg">자격증</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="port">
+        <div class="port__img">
+          <!-- 슬라이드 -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/sqld.png" alt="자격증1">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/sqlex.png" alt="자격증2">
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="port__text">
+          <h3>SQLD</h3>
+          <ul>
+            <li><span>주요 기능 : </span>주요 기능 설명</li>
+            <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
+            <li><span>GitHub : </span>깃허브 주소</li>
+            <li><span>URL : </span>배포 주소</li>
+          </ul>
+          <div class="btn-group">
+            <a href="javascript:void(0)" class="btn btn--brown btn-modal-image" data-image-src="images/work_1.jpg">자격증</a>
+          </div>
+        </div>
+      </div>
+  </section>
   
 </body>
 </html>
