@@ -15,14 +15,13 @@ spyEls.forEach(function (spyEl) {
   .addTo(controller); // 컨트롤러에 장면을 할당(필수!)
 });
 
+
+
 // Swiper 사용
 const swiper = new Swiper('.license .swiper', {
   // 슬라이드 옵션 지정
   direction: 'horizontal', // 수평 슬라이드
   loop: true, // 반복 재생 여부, 1 -> 2 -> 3 -> 다시 1
-  // autoplay: { // 자동 재생 여부
-  //   delay: 5000 // 5초마다 슬라이드 바뀜
-  // },
 
   // 페이지네이션 옵션
   pagination: {
@@ -37,32 +36,58 @@ const swiper = new Swiper('.license .swiper', {
   },
 });
 
-// 모달창 띄우기
-const modal = document.querySelector('#modal');
-const modalBtn = document.querySelector('.license .btn-modal');
-const closeBtn = document.querySelector('#modal .btn-close');
+// 현재 연도 표시
+// 날짜 정보를 가진 JS의 Date 객체를 활용
+console.log(new Date().getFullYear());
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
 
-const imageModal = document.querySelector('#imageModal');
-const imageModalBtnList = document.querySelectorAll('.license .btn-modal-image');
-const imageCloseBtn = document.querySelector('#imageModal .btn-close');
-const imageEl = document.querySelector('#imageModal img');
+// 페이지 최상단으로 이동
+const toTopEl = document.querySelector('#toTop');
+// Quiz: visual 섹션 애니메이션 넣고/빼기
+const visualSpanEls = document.querySelectorAll('.visual h1 span');
 
-// Quiz: modalBtn 누르면 모달창이 뜨고 closeBtn 누르면 닫히도록 만들기
-modalBtn.addEventListener('click', function () {
-  modal.style.display = 'flex';
-  // modal.classList.add('show');
+window.addEventListener('scroll', function () {
+  // console.log(window.scrollY); // y축 스크롤 위치
+
+  // Quiz: 페이지 스크롤 위치가 
+  // 500px을 넘으면 요소를 보이고
+  // 500px을 넘지 않으면 요소 숨기기!
+  if (window.scrollY > 500) {
+    toTopEl.style.opacity = '1';
+    toTopEl.style.transform = 'translateX(0)';
+
+    // visual 섹션 애니메이션 클래스 빼기
+    visualSpanEls.forEach(function (visualSpan) {
+      visualSpan.classList.remove('animate-flash');
+    });
+  } else {
+    toTopEl.style.opacity = '0';
+    toTopEl.style.transform = 'translateX(100px)';
+    
+    // visual 섹션 애니메이션 클래스 넣기
+    visualSpanEls.forEach(function (visualSpan) {
+      visualSpan.classList.add('animate-flash');
+    });
+  }
 });
-closeBtn.addEventListener('click', function () {
-  modal.style.display = 'none';
-  // modal.classList.remove('show');
-});
 
-imageModalBtnList.forEach(function (imageModalBtn) {
-  imageModalBtn.addEventListener('click', function () {
-    imageEl.src = imageModalBtn.dataset.imageSrc;
-    imageModal.style.display = 'flex';
+const thumbBtn = document.getElementById('thumb');
+const headerEl = document.querySelector('#header');
+document.addEventListener('DOMContentLoaded', function () {
+  thumbBtn.addEventListener('click', function (event) {
+    event.preventDefault(); // 기본 링크 이동 방지
+    // 이미 애니메이션 중이라면 다시 실행하지 않음
+    if (thumbBtn.classList.contains('liked')) {
+      return; 
+    }
+    // 'liked' 클래스 추가하여 애니메이션 시작
+    thumbBtn.classList.add('liked');
   });
-});
-imageCloseBtn.addEventListener('click', function () {
-  imageModal.style.display = 'none';
+  thumbBtn.addEventListener('animationend', function() {
+        // 애니메이션이 끝난 후에 배경색 변경
+        headerEl.style.backgroundColor = 'crimson';
+        thumbBtn.style.backgroundColor = 'crimson';
+        
+    });
 });

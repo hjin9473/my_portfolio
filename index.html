@@ -6,7 +6,7 @@
   
   <title>My_PORTFOLIO</title>
 
-  <link rel="icon" href="tie.ico">
+  <link rel="icon" href="./tie.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
   <script defer src="js/main.js"></script>
 </head>
 <body>
-  <header>
+  <header id="header">
     <div class="inner">
       <!-- 로고 -->
       <a href="index.html" class="logo">
@@ -68,6 +68,7 @@
         </div>
         <div class="about__text">
           <strong class="slogan font-en">Just do it</strong>
+          <li>"저는 새로운 기술을 빠르게 배우는 것을 좋아하며, 문제 해결에 대한 강한 의지를 가지고 있습니다!</li>
           <h3 class="font-en">Kim Hyeon jin(0000.08.16)</h3>
           <div>
             <h4 class="font-en">EDUCATION</h4>
@@ -155,10 +156,10 @@
   </section>
 
   <!-- license -->
-  <section id="license" class="license font-en">
+  <section id="license" class="license scroll-spy font-en">
     <div class="inner">
       <h2 class="title">LICENSE</h2>
-      <div class="port">
+      <div class="port" id="port1">
         <div class="port__img">
           <!-- 슬라이드 -->
           <div class="swiper">
@@ -180,18 +181,21 @@
         <div class="port__text">
           <h3>정보처리기사</h3>
           <ul>
-            <li><span>주요 기능 : </span>주요 기능 설명</li>
-            <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
-            <li><span>GitHub : </span>깃허브 주소</li>
-            <li><span>URL : </span>배포 주소</li>
+            <li><span>정보 : </span>국가기술자격증</li>
+            <li><span>필요 역량 : </span>소프트웨어 개발 역량<br>
+              데이터베이스 관리 역량<br>
+              네트워크 및 시스템 운영 역량<br>
+              IT 프로젝트 관리 역량<br>
+              논리적 사고력 및 문제 해결 능력<br>
+              의사소통 및 협업 능력</li>
           </ul>
           <div class="btn-group">
-            <a href="javascript:void(0)" class="btn btn--brown btn-modal-image" data-image-src="img/jungbo.jpg">자격증</a>
+            <a href="https://www.q-net.or.kr/" target="_blank" class="btn1 btn btn--blue">바로가기</a>
           </div>
         </div>
       </div>
 
-      <div class="port">
+      <div class="port" id="port2">
         <div class="port__img">
           <!-- 슬라이드 -->
           <div class="swiper">
@@ -213,17 +217,73 @@
         <div class="port__text">
           <h3>SQLD</h3>
           <ul>
-            <li><span>주요 기능 : </span>주요 기능 설명</li>
-            <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
-            <li><span>GitHub : </span>깃허브 주소</li>
-            <li><span>URL : </span>배포 주소</li>
+            <li><span>정보 : </span>데이터베이스(DB) 관련</li>
+            <li><span>필요 역량 : </span>SQL 활용<br>
+              데이터베이스 최적화<br>
+              절차형 SQL<br>
+              데이터베이스 관리 시스템(DBMS) 이해</li>
           </ul>
           <div class="btn-group">
-            <a href="javascript:void(0)" class="btn btn--brown btn-modal-image" data-image-src="images/work_1.jpg">자격증</a>
+            <a href="https://www.dataq.or.kr/www/sub/a_04.do" target="_blank" class="btn2 btn btn--blue">바로가기</a>
           </div>
         </div>
       </div>
   </section>
-  
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact font-en scroll-spy">
+    <div class="inner">
+      <h2 class="title">CONTACT</h2>
+      <div class="contact__info">
+        <ul>
+          <li>
+            <a href="https://github.com/hjin9473" target="_blank">github.com/hjin9473</a>
+          </li>
+          <li>010-1234-5678</li>
+          <li>hjin9473@gmail.com</li>
+        </ul>
+      </div>
+      <div class="contact__sns">
+        <ul>
+          <li>
+            <a href="#인스타그램주소" target="_blank">
+              <img src="img/icon_insta.png" alt="인스타그램">
+            </a>
+          </li>
+          <li>
+            <a href="#유튜브주소" target="_blank">
+              <img src="img/icon_youtube.png" alt="유튜브">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="contact-overlay"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="inner">
+      <p class="copyright">
+        &copy; <span class="this-year"></span>
+        <span class="font-en">Kim Hyeon Jin. All Rights Reserved.</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <div id="toTop">
+    <a href="#">
+      <span class="material-symbols-outlined">stat_3</span>
+    </a>
+  </div>
+
+  <div id="thumb">
+    <a href="#">
+      <span class="material-symbols-outlined">thumb_up</span>
+    </a>
+  </div>
+
 </body>
 </html>
