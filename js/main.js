@@ -23,6 +23,10 @@ const swiper = new Swiper('.license .swiper', {
   direction: 'horizontal', // 수평 슬라이드
   loop: true, // 반복 재생 여부, 1 -> 2 -> 3 -> 다시 1
 
+  autoplay: {
+    delay: 5000,  // 5000ms = 5초
+    disableOnInteraction: false,  // 사용자가 조작해도 자동재생 유지
+  },
   // 페이지네이션 옵션
   pagination: {
     el: '.license .swiper-pagination',
@@ -90,4 +94,18 @@ document.addEventListener('DOMContentLoaded', function () {
         thumbBtn.style.backgroundColor = 'crimson';
         
     });
+});
+
+const hamburgerBtn = document.querySelector('.btn-hamburger');
+const navEl = document.querySelector('header nav');
+const menuItems = document.querySelectorAll('header nav ul li a');
+
+hamburgerBtn.addEventListener('click', function () {
+  navEl.classList.toggle('active');
+});
+
+menuItems.forEach(function (menuItem) {
+  menuItem.addEventListener('click', function () {
+    navEl.classList.remove('active');
+  });
 });

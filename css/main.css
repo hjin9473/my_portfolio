@@ -92,6 +92,15 @@ img {
   animation-timing-function: cubic-bezier(.43,.19,.02,1);
 }
 
+header .btn-hamburger {
+  display: none;
+}
+header .btn-hamburger .material-symbols-outlined {
+  font-size: 40px;
+  /* 수직 정렬 맞추기 */
+  display: block;
+  /* line-height: 60px; */
+}
 
 
 .visual p span {
@@ -271,7 +280,7 @@ header nav ul li a:hover::after {
 /* 하위 선택자가 아닌 자식 선택자 쓴 것에 유의! */
 .skill .skill__list > li {
   border-radius: 20px;
-  flex-basis: 200px;
+  flex-basis: 220px;
   background-color: #fff9ec;
   display: flex;
   flex-direction: column;
@@ -337,7 +346,7 @@ header nav ul li a:hover::after {
   /* object-fit: cover; */
 }
 .license .port .port__text {
-  margin-left: 120px;
+  margin-left: 100px;
   padding: 30px;
   font-size: 14px;
   display: flex;
@@ -371,6 +380,124 @@ header nav ul li a:hover::after {
   transform: translateY(0);
   opacity: 1;
 }
+
+
+/* additional */
+.additional {
+  padding: 150px 0;
+  background-color: #f9f9f9;
+}
+
+.additional .description {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 60px;
+}
+
+.learnlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.additional__item {
+  height: 250px;
+  width: calc(33.333% - 20px);
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  min-width: 250px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: transparent; /* 기본 글자 숨기기 */
+  transition: transform 0.3s, color 0.3s;
+}
+
+.additional__item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1); 
+  border-radius: 12px;
+  transition: 0.3s;
+  z-index: 0;
+}
+
+.additional__item:hover {
+  transform: translateY(-5px);
+  color: white; /* hover 시 글자 색 하얗게 */
+}
+
+.additional__item:hover::before {
+  background: rgba(0, 0, 0, 0.7); /* hover 시 70% 어두움 */
+}
+
+.additional__item > h3,
+.additional__item > ul {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.1s, transform 0.1s;
+}
+
+.additional__item:hover > h3,
+.additional__item:hover > ul {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.additional__item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  /* color는 부모에서 조절되므로 삭제 */
+}
+
+.additional__item ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.8;
+  /* color는 부모에서 조절되므로 삭제 */
+}
+
+.additional__item:nth-child(1) {
+  background-image: url('../img/cloud.png');
+  background-size: cover;
+  background-position: center;
+  color: white; /* 배경 이미지 대비 */
+}
+
+.additional__item:nth-child(2) {
+  background-image: url('../img/clcd.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.additional__item:nth-child(3) {
+  background-image: url('../img/react.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* CONTACT */
 .contact {
@@ -519,16 +646,122 @@ footer .copyright {
 }
 
 
+@media screen and (max-width: 767px) {
+  /* 모바일에서는 화면의 80%만 차지하도록 */
+  .inner {
+    width: 80%;
+  }
+  .inner .first-line,
+  .inner .second-line {
+    font-size: 150%;
+  }
 
+  .title {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+  .title::after {
+    width: 60px;
+  }
 
+  header .btn-hamburger {
+    display: block;
+  }
+  header nav {
+    background-color: aliceblue;
+    position: fixed;
+    top: 60px;           
+    right: -80%;       
+    width: 40%;        
+    height: 30%;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  header nav.active {
+    right: 0;
+  }
+  header nav ul {
+    /* 1) ul 태그를 원래 보여짐 특성인 블록으로 원복 또는 flex 방향 바꾸기 */
+    /* display: block; */
+    flex-direction: column;
+    padding-top: 60px;
+  }
+  header nav ul li {
+    padding: 10px 20 px 10px 80px;
+    font-size: 30px;
+    text-align: right;
+  }
+  header nav ul li a {
+    transition: 0.5s;
+  }
+  header nav ul li a:hover {
+    letter-spacing: 10px;
+  }
 
+  .visual > .inner {
+    font-size: 30px;
+  }
+  .visual > .inner .mobile-lf {
+    display: inline !important;
+  }
 
+  .about {
+    padding: 100px 0;
+  }
+  .about .about__wrapper {
+    flex-direction: column;
+  }
+  .about .about__wrapper .about__img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .about .about__wrapper .about__text {
+    width: 100%;
+    text-align: center;
+  }
 
+  .skill {
+    padding: 100px 0;
+  }
 
+  .project {
+    padding: 100px 0;
+  }
+  .project .port {
+    flex-direction: column;
+    margin: 40px 0;
+  }
+  .project .port .port__img,
+  .project .port .port__text {
+    width: 100%;
+  }
+  .project .port .port__text {
+    padding: 20px 0 0;
+  }
+  .project .port .btn-group {
+    margin-top: 20px;
+  }
 
+  .contact {
+    padding: 100px 0;
+  }
 
+  #modal .modal-content,
+  #imageModal .modal-content {
+    width: 80%;
+  }
+  #imageModal .modal-body img {
+    width: 100%;
+  }
 
+  .learnlist {
+    flex-direction: column;
+  }
 
+  .additional__item {
+    width: 100%;
+  }
+}
 
 
 @keyframes shake-and-grow {
