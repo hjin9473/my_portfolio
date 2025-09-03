@@ -434,7 +434,7 @@ header nav ul li a:hover::after {
 }
 
 .additional__item:hover::before {
-  background: rgba(0, 0, 0, 0.7); /* hover 시 70% 어두움 */
+  background: rgba(0, 0, 0, 0.8); /* hover 시 80% 어두움 */
 }
 
 .additional__item > h3,
