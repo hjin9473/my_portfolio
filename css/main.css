@@ -699,7 +699,7 @@ footer .copyright {
   }
 
   .visual > .inner {
-    font-size: 30px;
+    font-size: 24px;
   }
   .visual > .inner .mobile-lf {
     display: inline !important;
@@ -822,6 +822,9 @@ footer .copyright {
     background-size: cover;
     background-position: center;
   }
+  footer .copyright {
+    font-size: 70%;
+}
 
 
 }
