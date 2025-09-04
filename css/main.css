@@ -649,7 +649,7 @@ footer .copyright {
 @media screen and (max-width: 767px) {
   /* 모바일에서는 화면의 80%만 차지하도록 */
   .inner {
-    width: 80%;
+    width: 70%;
   }
   .inner .first-line,
   .inner .second-line {
@@ -672,8 +672,8 @@ footer .copyright {
     position: fixed;
     top: 60px;           
     right: -80%;       
-    width: 45%;        
-    height: 50%;
+    width: 50%;        
+    height: 40%;
     overflow: hidden;
     transition: 0.5s;
   }
@@ -688,7 +688,7 @@ footer .copyright {
   }
   header nav ul li {
     padding: 10px 20px 10px 10px;
-    font-size: 30px;
+    font-size: 16px;
     text-align: right;
   }
   header nav ul li a {
@@ -768,6 +768,62 @@ footer .copyright {
     transform: scaleX(1.1);
     transform-origin: right; 
   }
+  .license .port {
+    flex-direction: column; /* 가로 정렬을 세로 정렬로 변경 */
+    margin: 40px 0; /* 각 자격증 섹션 사이에 여백 추가 */
+  }
+  .license .port .port__img,
+  .license .port .port__text {
+    width: 100%; /* 이미지와 텍스트가 전체 너비를 차지하도록 설정 */
+  }
+  .license .port .port__text {
+    margin-left: 0; /* 기존에 설정된 왼쪽 마진 제거 */
+    padding: 20px 0 0; /* 상단에 여백 추가 */
+    text-align: center; /* 텍스트를 중앙 정렬 */
+  }
+  .license .port .btn-group {
+    justify-content: center; /* 버튼 그룹 중앙 정렬 */
+    margin-top: 20px; /* 버튼 그룹 상단 여백 추가 */
+  }
+  /* 또는 */
+  .license .port .btn-group .btn:first-child {
+    margin-right: 20px; /* 버튼 사이 간격 조정 */
+  }
+  .visual > .inner .mobile-lf {
+    display: inline !important;
+  }
+
+  .learnlist {
+    flex-direction: column; /* 추가 학습 목록을 세로로 정렬 */
+    align-items: center; /* 목록 아이템들을 가운데 정렬 */
+  }
+
+  .additional__item {
+    width: 90%; /* 화면 너비의 90%를 차지하도록 설정 */
+    max-width: 400px; /* 너무 커지지 않도록 최대 너비 설정 */
+    height: 200px; /* 아이템의 높이를 고정 (필요에 따라 조절) */
+    margin-bottom: 20px; /* 각 아이템 사이에 여백 추가 */
+  }
+
+  .additional__item:nth-child(1) {
+    background-image: url('../img/cloud.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .additional__item:nth-child(2) {
+    background-image: url('../img/clcd.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .additional__item:nth-child(3) {
+    background-image: url('../img/react.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+
 }
 
 
