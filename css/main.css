@@ -672,8 +672,8 @@ footer .copyright {
     position: fixed;
     top: 60px;           
     right: -80%;       
-    width: 40%;        
-    height: 30%;
+    width: 45%;        
+    height: 50%;
     overflow: hidden;
     transition: 0.5s;
   }
@@ -687,7 +687,7 @@ footer .copyright {
     padding-top: 60px;
   }
   header nav ul li {
-    padding: 10px 20 px 10px 80px;
+    padding: 10px 20px 10px 10px;
     font-size: 30px;
     text-align: right;
   }
@@ -760,6 +760,13 @@ footer .copyright {
 
   .additional__item {
     width: 100%;
+  }
+  .menu {
+    text-align: right !important;
+  }
+  .menu-item:hover {
+    transform: scaleX(1.1);
+    transform-origin: right; 
   }
 }
 
