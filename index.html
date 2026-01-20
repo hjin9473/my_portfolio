@@ -51,40 +51,67 @@
   <section class="visual">
   <div class="inner">
     <p class="first-line">
-      <span>F</span><span>u</span><span>l</span><span>l</span>&nbsp;
-      <span>S</span><span>t</span><span>a</span><span>c</span><span>k</span>&nbsp;<br class="mobile-lf" style="display: none;">
-      <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
+      <span>C</span><span>o</span><span>d</span><span>e</span>&nbsp;
+      <span>t</span><span>o</span>&nbsp;
+      <span>I</span><span>n</span><span>f</span><span>r</span><span>a</span>
     </p>
     <p class="second-line">
-      <span>꿈</span><span>나</span><span>무</span>&nbsp;
-      <span class="k">김</span><span class="k">현</span><span class="k">진</span>&nbsp;
-      <span>입니다.</span>
+      <span>인</span><span>프</span><span>라</span><span>를</span>&nbsp;
+      <span>이</span><span>해</span><span>하</span><span>는</span>&nbsp;<br class="mobile-lf" style="display: none;">
+      <span>백</span><span>엔</span><span>드</span>&nbsp;
+      <span>개</span><span>발</span><span>자</span>
     </p>
   </div>
-  </section>
+</section>
 
-  <section id="about" class="about">
-    <div class="inner">
-      <h2 class="title font-en">ABOUT</h2>
-      <div class="about__wrapper">
-        <div class="about__img">
-          <img src="./img/profile.jpg" alt="프로필">
-        </div>
-        <div class="about__text">
-          <strong class="slogan font-en">Just do it</strong>
-          <li>"저는 새로운 기술을 빠르게 배우는 것을 좋아하며, 문제 해결에 대한 강한 의지를 가지고 있습니다!</li>
-          <h3 class="font-en">Kim Hyeon jin(0000.08.16)</h3>
-          <div>
-            <h4 class="font-en">EDUCATION</h4>
-            <ul>
-              <li>00.00 ~ 00.00 00대학교 정보통신학부 졸업</li>
-              <li>00.00 ~ 00.00 클라우드(AWS)활용 자바/스프링 개발 부트캠프 수료</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="skill" class="skill scroll-spy">
+  <div class="inner">
+    <h2 class="title font-en">TECH STACK</h2>
+    <ul class="skill__list">
+      <li class="h" style="border: 2px solid #3078ff;">
+        <h3 class="font-en">BE</h3>
+        <h4 class="font-en">Backend Core</h4>
+        <ul>
+          <li>Java 21 (LTS)</li>
+          <li>Spring Boot 4.0.1</li>
+          <li>Spring Security / AOP</li>
+          <li>JPA / QueryDSL</li>
+        </ul>
+      </li>
+      
+      <li class="h" style="border: 2px solid #9b30ff;">
+        <h3 class="font-en">Infra</h3>
+        <h4 class="font-en">DevOps & Cloud</h4>
+        <ul>
+          <li>AWS (EC2, RDS)</li>
+          <li>Docker & Compose</li>
+          <li>GitHub Actions (CI/CD)</li>
+          <li>Nginx (HTTPS/SSL)</li>
+        </ul>
+      </li>
+
+      <li class="h">
+        <h3 class="font-en">DB</h3>
+        <h4 class="font-en">Database</h4>
+        <ul>
+          <li>MySQL 9.x</li>
+          <li>Redis (Session/Cache)</li>
+          <li>MyBatis (Legacy)</li>
+        </ul>
+      </li>
+
+      <li class="h">
+        <h3 class="font-en">FE</h3>
+        <h4 class="font-en">Frontend</h4>
+        <ul>
+          <li>HTML5 / CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Thymeleaf</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
 
   <section id="skill" class="skill scroll-spy">
     <div class="inner">
@@ -158,7 +185,105 @@
       </ul>
     </div>
   </section>
+<section id="project" class="project scroll-spy">
+  <div class="inner">
+    <h2 class="title font-en">PROJECTS</h2>
+    
+    <div class="project-main" style="margin-bottom: 80px;">
+      <h3 class="project-label">🚀 MAIN PROJECT</h3>
+      <div class="project-card main-card">
+        <div class="project-header">
+          <div class="header-left">
+            <h3>B2B/B2C 중개형 커머스 플랫폼</h3>
+            <p class="period">2025.10 ~ 2026.01 (4개월) | 팀 프로젝트 (4명) | <b>Role: 백엔드 리드, 인프라 구축</b></p>
+          </div>
+          <div class="header-right">
+            <a href="https://github.com/본인아이디/레포지토리" target="_blank" class="github-btn">GitHub ></a>
+          </div>
+        </div>
 
+        <div class="project-body">
+          <div class="project-stack-list">
+             <span class="tag tech-spring">Spring Boot 4</span>
+             <span class="tag tech-spring">Spring Security</span>
+             <span class="tag tech-spring">Spring Data JPA</span>
+             <span class="tag tech-infra">AWS (EC2/RDS)</span>
+             <span class="tag tech-infra">Docker</span>
+             <span class="tag tech-db">MariaDB</span>
+          </div>
+
+          <div class="project-content">
+            <div class="desc-box">
+              <h4>💡 기획 의도 & 아키텍처</h4>
+              <p>대규모 트래픽을 고려한 확장 가능한 커머스 플랫폼입니다. <b>Spring Boot 4.0 & Java 21</b> 최신 환경을 도입했으며, <b>Docker & AWS</b>를 활용해 개발부터 배포까지의 환경 불일치를 해결했습니다.</p>
+            </div>
+            
+            <div class="feat-box">
+              <h4>📌 Key Achievements (Troubleshooting)</h4>
+              <ul>
+                <li>
+                  <b>✅ 데이터 무결성을 지킨 AWS 마이그레이션:</b>
+                  <p>로컬 Docker(MariaDB)에서 AWS RDS로 이관 중 <code>Collation</code> 충돌 및 트리거 권한 에러 발생. <code>sed</code> 스크립트로 덤프 파일을 정밀 치환하여 데이터 100% 이관 성공.</p>
+                </li>
+                <li>
+                  <b>✅ JPA & QueryDSL 도입으로 생산성 40% 향상:</b>
+                  <p>기존 MyBatis의 반복적인 SQL 작업 비효율을 개선하기 위해 JPA 도입. 복잡한 동적 쿼리(상품 검색)는 QueryDSL로 최적화하여 Type-Safety 확보.</p>
+                </li>
+                <li>
+                  <b>✅ Stateless 보안 아키텍처:</b>
+                  <p>Spring Security와 Redis Session을 연동하여, 서버 스케일 아웃 시에도 로그인이 유지되는 분산 환경 구축.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-sub">
+      <h3 class="project-label">🌱 SUB PROJECT (Growth)</h3>
+      <div class="project-card sub-card">
+        <div class="project-header">
+          <div class="header-left">
+            <h3>C2C 중고거래 웹 서비스 (Semi-Project)</h3>
+            <p class="period">2025.07 ~ 2025.09 (2개월) | 팀 프로젝트 (3명) | Role: 게시판 및 회원관리 구현</p>
+          </div>
+        </div>
+
+        <div class="project-body sub-body">
+          <div class="project-stack-list">
+             <span class="tag tech-legacy">JSP / Servlet</span>
+             <span class="tag tech-legacy">MyBatis</span>
+             <span class="tag tech-db">MySQL Workbench</span>
+             <span class="tag tech-base">HTML/CSS</span>
+          </div>
+
+          <div class="project-content">
+            <ul>
+              <li><b>🎯 프로젝트 목표:</b> 프레임워크 없는 순수 <b>JSP/Servlet</b>환경에서 MVC 패턴(Model 2)을 직접 구현하며 웹의 동작 원리(Request/Response Cycle) 체득.</li>
+              <li><b>🛠️ 기술적 배움:</b>
+                <br>- MyBatis를 통해 SQL Mapper의 구조와 DB 연결 관리(Connection Pool)의 중요성 학습.
+                <br>- 이 프로젝트의 한계(코드 중복, 유지보수 어려움)를 느끼고, 파이널 프로젝트에서 <b>Spring Boot & JPA</b>를 도입하는 계기가 됨.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .tag {
+    background: #eee;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+  }
+</style>
   <!-- license -->
   <section id="license" class="license scroll-spy font-en">
     <div class="inner">
