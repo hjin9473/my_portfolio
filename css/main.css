@@ -550,3 +550,4 @@ footer .copyright { text-align: center; font-weight: 600; line-height: 200px; }
     color: #3078ff; /* 모바일에서 라벨 강조 */
   }
 }
+.tech-mobile { background: #ede7f6; color: #673ab7; }

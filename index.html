@@ -112,7 +112,7 @@
     <h3 class="font-en">Main</h3>
     <h4 class="font-en">Backend & Infra</h4>
     <ul>
-      <li>Java 17 / Spring Boot 3.x</li>
+      <li>Java 17 / Spring Boot 4.x</li>
       <li>Spring Security / JPA</li>
       <li>AWS (EC2, RDS, S3)</li>
       <li>Docker / GitHub Actions</li>
@@ -160,21 +160,22 @@
       <h2 class="title font-en">PROJECTS</h2>
       
       <div class="project-main" style="margin-bottom: 80px;">
-        <h3 class="project-label">🚀 MAIN PROJECT</h3>
+        <h3 class="project-label">🚀 GUDI FINAL PROJECT</h3>
         <div class="project-card main-card">
           <div class="project-header">
             <div class="header-left">
               <h3>Ali - B2B/B2C 중개형 커머스 플랫폼</h3>
-              <p class="period">2025.10 ~ 2026.01 (4개월) | 팀 프로젝트 (4명) | <b>Role: 백엔드 리드, 인증/보안, 인프라 구축</b></p>
+              <p class="period">2025.12 ~ 2026.01 (1개월) | 팀 프로젝트 (5명) | <b>Role: DB관리, 인증/보안, 관리자페이지, QnA , 인프라 구축</b></p>
             </div>
             <div class="header-right">
-              <a href="https://github.com/ali" target="_blank" class="github-btn">GitHub ></a>
+              <a href="https://github.com/hjin9473/ali" target="_blank" class="github-btn">GitHub ></a>
+              <a href="https://skitter-meadowlark-f7e.notion.site/ALI-B2B-B2C-2ee82f0db5b28099ba1cd335a502caa0" target="_blank" class="github-btn">Notion ></a>
             </div>
           </div>
 
           <div class="project-body">
             <div class="project-stack-list">
-               <span class="tag tech-spring">Spring Boot 3.x</span>
+               <span class="tag tech-spring">Spring Boot 4.x</span>
                <span class="tag tech-spring">Spring Security</span>
                <span class="tag tech-spring">Spring Data JPA</span>
                <span class="tag tech-infra">AWS (EC2/RDS/S3)</span>
@@ -186,11 +187,11 @@
             <div class="project-content">
               <div class="desc-box">
                 <h4>💡 기획 의도 & 주요 기능</h4>
-                <p>공급자와 구매자 역할이 분리된 대규모 트래픽 고려 커머스 플랫폼입니다. <b>하이브리드 로그인(OAuth2 + Form)</b>과 <b>권한 전환 시스템</b>을 구현했습니다.</p>
+                <p>공급자와 구매자 역할이 분리된 대규모 트래픽을 고려한 커머스 플랫폼입니다. <b>하이브리드 로그인(OAuth2 + Form)</b>과 <b>권한 전환 시스템</b>을 구현했습니다.</p>
                 <ul style="margin-top: 10px; font-size: 14px; color: #555;">
-                   <li>🔐 <b>인증/보안:</b> Spring Security FilterChain 기반 URL 접근 제어, 사업자 진위 여부 검증 API 연동</li>
-                   <li>💬 <b>소통/AI:</b> WebSocket 실시간 채팅, 1:1 문의 상태 생명주기 관리, 관리자 대시보드 차트 시각화</li>
-                   <li>🛠 <b>DevOps:</b> Swagger API 명세 자동화, AOP 기반 성능 모니터링, 무중단 배포</li>
+                  <li>🔐 <b>인증/보안:</b> Spring Security FilterChain 기반 URL 접근 제어, 사업자 진위 여부 검증 API 연동</li>
+                  <li>💬 <b>소통/AI:</b> WebSocket 실시간 채팅, 1:1 문의 상태 생명주기 관리, 관리자 대시보드 차트 시각화</li>
+                  <li>🛠 <b>DevOps:</b> Swagger API 명세 자동화, AOP 기반 성능 모니터링, 무중단 배포</li>
                 </ul>
               </div>
               
@@ -198,11 +199,11 @@
                 <h4>📌 Key Achievements (Troubleshooting)</h4>
                 <ul>
                   <li>
-                    <b>✅ AWS RDS 'Too many connections' 장애 해결:</b>
+                    <b>AWS RDS 'Too many connections' 장애 해결:</b>
                     <p>프리티어 RDS의 낮은 커넥션 제한(30개)으로 인한 서버 마비 현상 발생. HikariCP 설정을 최적화하고, RDS 파라미터 그룹을 수정하여 <b>max_connections를 100으로 상향</b> 조정해 안정성 확보.</p>
                   </li>
                   <li>
-                    <b>✅ 데이터 무결성을 지킨 마이그레이션:</b>
+                    <b>데이터 무결성을 지킨 마이그레이션:</b>
                     <p>Local(MariaDB)에서 RDS(MySQL)로 이관 중 Collation 충돌 및 트리거 권한 에러 발생. <code>sed</code> 스크립트로 덤프 파일을 정밀 치환하고 <code>skip-triggers</code> 옵션을 활용해 <b>데이터 100% 이관 성공</b>.</p>
                   </li>
                 </ul>
@@ -213,7 +214,7 @@
       </div>
 
       <div class="project-sub">
-        <h3 class="project-label">🌱 SUB PROJECT (Growth)</h3>
+        <h3 class="project-label">🌱 GUDI SUB PROJECT</h3>
         <div class="project-card sub-card">
           <div class="project-header">
             <div class="header-left">
@@ -224,10 +225,10 @@
 
           <div class="project-body sub-body">
             <div class="project-stack-list">
-               <span class="tag tech-legacy">JSP / Servlet</span>
-               <span class="tag tech-legacy">MyBatis</span>
-               <span class="tag tech-db">MySQL</span>
-               <span class="tag tech-base">HTML/CSS</span>
+              <span class="tag tech-legacy">JSP / Servlet</span>
+              <span class="tag tech-legacy">MyBatis</span>
+              <span class="tag tech-db">MySQL</span>
+              <span class="tag tech-base">HTML/CSS</span>
             </div>
 
             <div class="project-content">
@@ -240,7 +241,46 @@
         </div>
       </div>
 
+      <div class="project-basic" style="margin-top: 60px;">
+        <h3 class="project-label" style="border-left-color: #9b30ff;">📱 BASIC PROJECT</h3>
+        <div class="project-card sub-card" style="border-top: 5px solid #9b30ff;">
+          <div class="project-header">
+            <div class="header-left">
+              <h3>Calorie cutter - 운동 정보 & 루틴 가이드 앱</h3>
+              <p class="period">2024.9 ~ 2025.05 (6개월) | 졸업작품 (팀 프로젝트) | <b>Role: 운동 백과 기능 구현, JSON 파싱</b></p>
+            </div>
+          </div>
+
+          <div class="project-body sub-body">
+            <div class="project-stack-list">
+               <span class="tag tech-mobile">Android / Kotlin</span>
+               <span class="tag tech-base">Java</span>
+               <span class="tag tech-base">Gson (JSON)</span>
+               <span class="tag tech-base">Glide</span>
+            </div>
+
+            <div class="project-content">
+              <ul>
+                <li style="margin-bottom: 15px;">
+                  <b>🎯 프로젝트 개요:</b><br>
+                  안드로이드 네이티브 앱 개발의 기초를 다지기 위한 프로젝트입니다. 서버 통신 이전 단계로서, <b>로컬 데이터 핸들링</b>과 <b>외부 앱 연동</b>에 집중했습니다.
+                </li>
+                <li>
+                  <b>💻 담당 파트 (Wiki & Data):</b>
+                  <ul style="margin-top: 5px; color: #555;">
+                    <li>- <b>JSON 파싱:</b> Assets 내 운동 데이터(JSON)를 <code>Gson</code> 라이브러리로 객체화하여 RecyclerView에 효율적으로 바인딩.</li>
+                    <li>- <b>외부 연동:</b> 사용자가 상세 화면에서 유튜브 버튼 클릭 시, <code>Implicit Intent</code>를 생성하여 해당 운동 검색 결과로 즉시 연결.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    
   </section>
 
   <section id="license" class="license scroll-spy font-en">
@@ -336,7 +376,7 @@
       <div class="contact__info">
         <ul>
           <li><a href="https://github.com/hjin9473" target="_blank">github.com/hjin9473</a></li>
-          <li>010-1234-5678</li>
+          <li>010-5481-9473</li>
           <li>hjin9473@gmail.com</li>
         </ul>
       </div>
