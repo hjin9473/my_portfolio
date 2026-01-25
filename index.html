@@ -44,14 +44,19 @@
   <section class="visual">
     <div class="inner">
       <p class="first-line">
-        <span>C</span><span>o</span><span>d</span><span>e</span>&nbsp;
-        <span>t</span><span>o</span>&nbsp;
-        <span>I</span><span>n</span><span>f</span><span>r</span><span>a</span>
+        <span>D</span><span>e</span><span>e</span><span>p</span>&nbsp;
+        <span>D</span><span>i</span><span>v</span><span>e</span><span>,</span>&nbsp;
+        <span>D</span><span>e</span><span>e</span><span>p</span>&nbsp;
+        <span>W</span><span>i</span><span>d</span><span>e</span>
       </p>
+      
       <p class="second-line">
-        <span>인</span><span>프</span><span>라</span><span>를</span>&nbsp;
-        <span>이</span><span>해</span><span>하</span><span>는</span>&nbsp;<br class="mobile-lf" style="display: none;">
-        <span>백</span><span>엔</span><span>드</span>&nbsp;
+        <span>깊</span><span>이</span>&nbsp;<span>있</span><span>는</span>&nbsp;
+        <span>코</span><span>드</span><span>와</span>&nbsp;
+        <br class="mobile-lf" style="display: none;"> <span>넓</span><span>은</span>&nbsp;
+        <span>인</span><span>프</span><span>라</span>&nbsp;
+        <span>시</span><span>야</span><span>를</span>&nbsp;
+        <br class="mobile-lf" style="display: none;"> <span>갖</span><span>춘</span>&nbsp;
         <span>개</span><span>발</span><span>자</span>
       </p>
     </div>
@@ -112,7 +117,7 @@
     <h3 class="font-en">Main</h3>
     <h4 class="font-en">Backend & Infra</h4>
     <ul>
-      <li>Java 17 / Spring Boot 4.x</li>
+      <li>Java 21 / Spring Boot 4.x</li>
       <li>Spring Security / JPA</li>
       <li>AWS (EC2, RDS)</li>
       <li>Docker / GitHub Actions</li>
@@ -200,11 +205,14 @@
                 <ul>
                   <li>
                     <b>AWS RDS 'Too many connections' 장애 해결:</b>
-                    <p>프리티어 RDS의 낮은 커넥션 제한(30개)으로 인한 서버 마비 현상 발생. HikariCP 설정을 최적화하고, RDS 파라미터 그룹을 수정하여 <b>max_connections를 100으로 상향</b> 조정해 안정성 확보.</p>
+                    <p>프리티어 RDS의 낮은 커넥션 제한(30개)으로 인한 서버 마비 현상 발생. HikariCP 설정을 최적화하고,
+                      RDS 파라미터 그룹을 수정하여 <b>max_connections를 100으로 상향</b> 조정해 안정성 확보</p>
                   </li>
                   <li>
                     <b>데이터 무결성을 지킨 마이그레이션:</b>
-                    <p>Local(MariaDB)에서 RDS(MySQL)로 이관 중 Collation 충돌 및 트리거 권한 에러 발생. <code>sed</code> 스크립트로 덤프 파일을 정밀 치환하고 <code>skip-triggers</code> 옵션을 활용해 <b>데이터 100% 이관 성공</b>.</p>
+                    <p>Local(MariaDB)에서 RDS(MySQL)로 이관 중 Collation 충돌 및 트리거 권한 에러 발생.
+                      <code>sed</code> 스크립트로 덤프 파일을 정밀 치환하고 <code>skip-triggers</code> 옵션을 활용해 
+                      <b>데이터 100% 이관 성공</b></p>
                   </li>
                 </ul>
               </div>
@@ -219,7 +227,7 @@
           <div class="project-header">
             <div class="header-left">
               <h3>C2C 중고거래 웹 서비스 (Semi-Project)</h3>
-              <p class="period">2025.07 ~ 2025.09 (2개월) | 팀 프로젝트 (3명) | Role: 게시판 및 회원관리 구현</p>
+              <p class="period">2025.10 ~ 2025.11 (2주) | 팀 프로젝트 (4명) | Role: 게시판 및 회원관리 구현</p>
             </div>
             <a href="https://github.com/hjin9473/userMarket" target="_blank" class="github-btn">GitHub ></a>
           </div>
@@ -234,21 +242,36 @@
 
             <div class="project-content">
               <ul>
-                <li><b>🎯 프로젝트 목표:</b> 프레임워크 없는 순수 <b>JSP/Servlet</b>환경에서 MVC 패턴(Model 2)을 직접 구현하며 웹의 동작 원리 체득.</li>
-                <li><b>🛠️ 기술적 배움:</b> MyBatis를 통한 SQL 관리와 Connection Pool의 중요성 학습. 이 프로젝트의 한계(유지보수 어려움)를 느끼고 파이널 프로젝트에서 Spring Boot를 도입하는 계기 마련.</li>
+                <li>
+                  <b>🎯 프로젝트 목표:</b> 프레임워크(Spring)의 도움 없이 <b>순수 JSP/Servlet</b>으로 MVC 패턴을 직접 구축하며, <b>HTTP 요청 흐름과 세션 기반 인증</b>의 동작 원리를 깊이 있게 이해
+                </li>
+                <li>
+                  <b>🔐 인증/세션 관리:</b> <b>HttpSession</b>을 활용하여 로그인/로그아웃 상태를 관리하고, 비로그인 사용자의 접근을 제어하는 인증 로직 전반을 구현
+                </li>
+                <li>
+                  <b>👤 회원 생애주기(CRUD):</b> <b>UserDAO</b> 설계를 통해 회원가입(유효성/중복 검사), 정보 수정, 회원 탈퇴 등 사용자 데이터의 전체 라이프사이클 관리
+                </li>
+                <li>
+                  <b>📂 프로필 이미지 처리:</b> <b>Servlet 3.0 Part API</b>를 사용하여 프로필 사진 업로드/수정을 구현하고, 로컬 스토리지 저장 및 갱신 로직 처리
+                </li>
+                <li>
+                  <b>📄 마이페이지 대시보드:</b> 사용자의 판매 내역, 찜 목록, 채팅방 리스트를 통합 조회하여 보여주는 마이페이지 뷰(View) 및 데이터 바인딩 처리
+                </li>
+                <li>
+                  <b>🛠️ 기술적 배움:</b> <b>JDBC</b>를 사용하며 반복적인 SQL 처리와 리소스 관리의 번거로움을 직접 체감. 이러한 <b>생산성과 유지보수의 한계</b>를 경험하며, 이후 파이널 프로젝트에서 <b>Spring Boot 도입의 필요성</b>을 논리적으로 정립하는 계기가 되었습니다.
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="project-basic" style="margin-top: 60px;">
-        <h3 class="project-label" style="border-left-color: #9b30ff;">📱 BASIC PROJECT</h3>
+      <div class="project-sub" style="margin-top: 60px;"> <h3 class="project-label" style="border-left-color: #9b30ff;">📱 ANDROID TEAM PROJECT</h3>
         <div class="project-card sub-card" style="border-top: 5px solid #9b30ff;">
           <div class="project-header">
             <div class="header-left">
-              <h3>Calorie cutter - 운동 정보 & 루틴 가이드 앱</h3>
-              <p class="period">2024.9 ~ 2025.05 (6개월) | 졸업작품 (팀 프로젝트) | <b>Role: 운동 백과 기능 구현, JSON 파싱</b></p>
+              <h3>Calorie Cutter - 운동 정보 & 루틴 가이드 앱</h3>
+              <p class="period">2024.09 ~ 2025.05 (6개월) | 졸업작품 (팀 프로젝트) | <b>Role: 운동 백과 기능 및 로컬 데이터 관리</b></p>
             </div>
           </div>
 
@@ -256,21 +279,31 @@
             <div class="project-stack-list">
               <span class="tag tech-mobile">Android / Kotlin</span>
               <span class="tag tech-base">Java</span>
-              <span class="tag tech-base">Gson (JSON)</span>
-              <span class="tag tech-base">Glide</span>
-            </div>
+              <span class="tag tech-base">Gson</span>
+              <span class="tag tech-base">SharedPreferences</span> </div>
 
             <div class="project-content">
               <ul>
-                <li style="margin-bottom: 15px;">
-                  <b>🎯 프로젝트 개요:</b><br>
-                  안드로이드 네이티브 앱 개발의 기초를 다지기 위한 프로젝트입니다. 서버 통신 이전 단계로서, <b>로컬 데이터 핸들링</b>과 <b>외부 앱 연동</b>에 집중했습니다.
+                <li style="margin-bottom: 10px;">
+                  <b>🎯 프로젝트 목표:</b> 안드로이드의 <b>View System</b>과 <b>생명주기(Lifecycle)</b>를 이해하고, 데이터 흐름을 효율적으로 관리하는 네이티브 앱 개발 역량 확보
                 </li>
                 <li>
-                  <b>💻 담당 파트 (Wiki & Data):</b>
+                  <b>📂 데이터 계층 설계 (Repository Pattern):</b>
+                  <ul style="margin-top: 5px; margin-bottom: 10px; color: #555;">
+                    <li>- <code>AssetManager</code>와 <code>Gson</code>을 활용해 JSON 데이터를 객체(Object)로 매핑하고, <b>Repository 패턴</b>을 적용해 UI와 데이터 로직을 분리</li>
+                  </ul>
+                </li>
+                <li>
+                  <b>⚡ UI 성능 최적화 (DiffUtil):</b>
+                  <ul style="margin-top: 5px; margin-bottom: 10px; color: #555;">
+                    <li>- 일반적인 RecyclerView Adapter 대신 <b>ListAdapter</b>와 <b>DiffUtil</b>을 적용하여, 데이터 변경 시 전체가 아닌 <b>변경된 아이템만 갱신</b>되도록 렌더링 성능 최적화</li>
+                  </ul>
+                </li>
+                <li>
+                  <b>💾 로컬 데이터 영속성 (SharedPreferences):</b>
                   <ul style="margin-top: 5px; color: #555;">
-                    <li>- <b>JSON 파싱:</b> Assets 내 운동 데이터(JSON)를 <code>Gson</code> 라이브러리로 객체화하여 RecyclerView에 효율적으로 바인딩.</li>
-                    <li>- <b>외부 연동:</b> 사용자가 상세 화면에서 유튜브 버튼 클릭 시, <code>Implicit Intent</code>를 생성하여 해당 운동 검색 결과로 즉시 연결.</li>
+                    <li>- 사용자의 '즐겨찾기(Bookmark)' 데이터를 <b>SharedPreferences</b>로 관리하여, 앱 종료 후에도 데이터가 유지되도록 <b>경량 데이터 영속성</b> 구현</li>
+                    <li>- <b>Implicit Intent</b>를 활용한 유튜브 앱 연동으로 UX 확장</li>
                   </ul>
                 </li>
               </ul>
