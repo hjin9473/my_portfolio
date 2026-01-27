@@ -178,46 +178,46 @@
             </div>
           </div>
 
-          <div class="project-body">
-            <div class="project-stack-list">
-              <span class="tag tech-spring">Spring Boot 4.x</span>
-              <span class="tag tech-spring">Spring Security</span>
-              <span class="tag tech-spring">Spring Data JPA</span>
-              <span class="tag tech-infra">AWS (EC2/RDS)</span>
-              <span class="tag tech-infra">Docker</span>
-              <span class="tag tech-infra">GitHub Actions</span>
-              <span class="tag tech-db">MariaDB 11.4</span>
-            </div>
+         <div class="project-body">
+    <div class="project-stack-list">
+      <span class="tag tech-spring">Spring Boot 4.x</span>
+      <span class="tag tech-spring">Spring Security</span>
+      <span class="tag tech-spring">Spring Data JPA</span>
+      <span class="tag tech-infra">AWS (EC2/RDS)</span>
+      <span class="tag tech-infra">Docker</span>
+      <span class="tag tech-infra">GitHub Actions</span>
+      <span class="tag tech-db">MariaDB 11.4</span>
+    </div>
 
-            <div class="project-content">
-              <div class="desc-box">
-                <h4>💡 기획 의도 & 주요 기능</h4>
-                <p>공급자와 구매자 역할이 분리된 대규모 트래픽을 고려한 커머스 플랫폼입니다. <b>하이브리드 로그인(OAuth2 + Form)</b>과 <b>권한 전환 시스템</b>을 구현했습니다.</p>
-                <ul style="margin-top: 10px; font-size: 14px; color: #555;">
-                  <li>🔐 <b>인증/보안:</b> Spring Security FilterChain 기반 URL 접근 제어, 사업자 진위 여부 검증 API 연동</li>
-                  <li>💬 <b>소통/AI:</b> WebSocket 실시간 채팅, 1:1 문의 상태 생명주기 관리, 관리자 대시보드 차트 시각화</li>
-                  <li>🛠 <b>DevOps:</b> Swagger API 명세 자동화, AOP 기반 성능 모니터링, 무중단 배포</li>
-                </ul>
-              </div>
-              
-              <div class="feat-box">
-                <h4>📌 Key Achievements (Troubleshooting)</h4>
-                <ul>
-                  <li>
-                    <b>AWS RDS 'Too many connections' 장애 해결:</b>
-                    <p>프리티어 RDS의 낮은 커넥션 제한(30개)으로 인한 서버 마비 현상 발생. HikariCP 설정을 최적화하고,
-                      RDS 파라미터 그룹을 수정하여 <b>max_connections를 100으로 상향</b> 조정해 안정성 확보</p>
-                  </li>
-                  <li>
-                    <b>데이터 무결성을 지킨 마이그레이션:</b>
-                    <p>Local(MariaDB)에서 RDS(MySQL)로 이관 중 Collation 충돌 및 트리거 권한 에러 발생.
-                      <code>sed</code> 스크립트로 덤프 파일을 정밀 치환하고 <code>skip-triggers</code> 옵션을 활용해 
-                      <b>데이터 100% 이관 성공</b></p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <div class="project-content">
+      <div class="desc-box">
+        <h4>💡 기획 의도 & 주요 기능</h4>
+        <p>공급자와 구매자 역할이 분리된 대규모 트래픽을 고려한 커머스 플랫폼입니다. <b>하이브리드 로그인(OAuth2 + Form)</b>과 <b>권한 전환 시스템</b>을 구현했습니다.</p>
+        <ul style="margin-top: 10px; font-size: 14px; color: #555;">
+          <li>🔐 <b>인증/보안:</b> Spring Security FilterChain 기반 URL 접근 제어, 사업자 진위 여부 검증 API 연동</li>
+          <li>💬 <b>소통/AI:</b> WebSocket 실시간 채팅, 1:1 문의 상태 생명주기 관리, 관리자 대시보드 차트 시각화</li>
+          <li>🛠 <b>DevOps:</b> Swagger API 명세 자동화, AOP 기반 성능 모니터링, 무중단 배포</li>
+        </ul>
+      </div>
+      
+      <div class="feat-box">
+        <h4>📌 Key Achievements (Troubleshooting)</h4>
+        <ul>
+          <li>
+            <b>AWS RDS 'Too many connections' 장애 해결:</b>
+            <p>프리티어 RDS의 낮은 커넥션 제한(30개)으로 인한 서버 마비 현상 발생. HikariCP 설정을 최적화하고,
+              RDS 파라미터 그룹을 수정하여 <b>max_connections를 100으로 상향</b> 조정해 안정성 확보</p>
+          </li>
+          <li>
+            <b>외부 API 연동 시 병목(Blocking) 해결:</b>
+            <p>국세청 API 호출 시 응답 지연으로 서버 스레드가 고갈되는 현상(Thread Starvation) 발생. 
+              <code>ReadTimeout(3s)</code> 설정을 명시적으로 적용하여 외부 장애가 내부 시스템으로 전이되지 않도록 
+              <b>회복 탄력성(Resilience) 확보</b></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
         </div>
       </div>
 
